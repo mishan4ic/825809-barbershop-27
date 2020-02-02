@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Барбершоп</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="main-header">
+      <!-- <img src="img/bg_photo.png" alt="" /> -->
       <nav class="shop-nav">
         <ul class="site-navigation">
           <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
@@ -15,6 +17,7 @@
           <li><a href="contacts.html">КОНТАКТЫ</a></li>
         </ul>
         <ul class="user-navigation">
+          <!-- <li><img src="img/login.png" alt="иконка ВХОД" /></li> -->
           <li class="login-link">ВХОД</li>
         </ul>
       </nav>
@@ -22,32 +25,33 @@
         <img src="img/index-logo@1x.png" alt="логотип" />
       </div>
     </header>
-    <section>
-      <ul>
-        <li>
-          <h3>БЫСТРО</h3>
-          <span
-            >МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ —
-            СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!</span
-          >
-        </li>
-        <li>
-          <h3>КРУТО</h3>
-          <span
-            >ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ. МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА
-            ИЛИ КИНО! ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.
-          </span>
-        </li>
-        <li>
-          <h3>ДОРОГО</h3>
-          <span
-            >НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО.
-            К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕННЫЙ СТАТУС?</span
-          >
-        </li>
-      </ul>
-    </section>
     <main>
+      <section>
+        <div>
+          <h3>БЫСТРО</h3>
+          <!-- <img src="img/icon_advantages.png" alt="" /> -->
+          <p>
+            МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ —
+            СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!
+          </p>
+        </div>
+        <div>
+          <h3>КРУТО</h3>
+          <!-- <img src="img/icon_advantages.png" alt="" /> -->
+          <p>
+            ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ. МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА
+            ИЛИ КИНО! ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.
+          </p>
+        </div>
+        <div>
+          <h3>ДОРОГО</h3>
+          <!-- <img src="img/icon_advantages.png" alt="" /> -->
+          <p>
+            НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К
+            ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕННЫЙ СТАТУС?
+          </p>
+        </div>
+      </section>
       <section>
         <div class="news">
           <h3>НОВОСТИ</h3>
@@ -59,24 +63,20 @@
             В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ
             МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ
           </p>
-          <span><a href="#">ВСЕ НОВОСТИ</a></span>
+          <a href="#">ВСЕ НОВОСТИ</a>
         </div>
         <div class="photogallery">
           <h3>ФОТОГАЛЕРЕЯ</h3>
-          <span><img src="img/Layer 21.png" alt="картинка галереи"/></span>
-          <ul>
-            <li>
-              <span><a href="#">НАЗАД</a></span>
-            </li>
-            <li>
-              <span><a href="#">ВПЕРЕД</a></span>
-            </li>
-          </ul>
+          <img src="img/Layer 21.png" alt="картинка галереи" />
+          <div class="button-gallery">
+            <a href="#">НАЗАД</a>
+            <a href="#">ВПЕРЕД</a>
+          </div>
         </div>
       </section>
       <!-- Контактная информация -->
       <section class="contacts-info">
-        <div>
+        <div class="contacts-block">
           <h3>КОНТАКТНАЯ ИНФОРМАЦИЯ</h3>
           <p>
             БАРБЕРШОП «БОРОДИНСКИЙ» АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д.
@@ -85,76 +85,58 @@
           <p>
             ВРЕМЯ РАБОТЫ: ПН—ПТ: С 10:00 ДО 22:00 СБ—ВС: С 10:00 ДО 19:00
           </p>
-          <ul>
-            <li>
-              <span><a href="#">КАК ПРОЕХАТЬ</a></span>
-            </li>
-            <li>
-              <span><a href="#">ОБРАТНАЯ СВЯЗЬ</a></span>
-            </li>
-          </ul>
+          <div class="button-contacts">
+            <a href="#">КАК ПРОЕХАТЬ</a>
+            <a href="#">ОБРАТНАЯ СВЯЗЬ</a>
+          </div>
         </div>
-        <div>
+        <div class="record-block">
           <h3>ЗАПИСАТЬСЯ</h3>
           <p>
             УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ
             БРОНИ
           </p>
           <div>
-            <ul>
-              <li>
-                <label for="data-field">ДАТА</label>
-                <input id="data-field" type="text" placeholder="08.10.2017" />
-              </li>
-              <li>
-                <label for="time-field">ВРЕМЯ</label>
-                <input id="time-field" type="text" placeholder="10:00" />
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <label for="name-field">ВАШЕ ИМЯ</label>
-                <input id="name-field" type="text" placeholder="Борода" />
-              </li>
-              <li>
-                <label for="call-field">ТЕЛЕФОН</label>
-                <input
-                  id="call-field"
-                  type="text"
-                  placeholder="+7 123 456-78-90"
-                />
-              </li>
-            </ul>
+            <div>
+              <label for="data-field">ДАТА</label>
+              <input id="data-field" type="number" placeholder="08.10.2017" />
+              <label for="time-field">ВРЕМЯ</label>
+              <input id="time-field" type="number" placeholder="10:00" />
+            </div>
+            <div>
+              <label for="name-field">ВАШЕ ИМЯ</label>
+              <input id="name-field" type="text" placeholder="Борода" />
+              <label for="call-field">ТЕЛЕФОН</label>
+              <input
+                id="call-field"
+                type="number"
+                placeholder="+7 123 456-78-90"
+              />
+            </div>
+            <a href="#">ОТПРАВИТЬ</a>
           </div>
-          <span><a href="#">ОТПРАВИТЬ</a></span>
         </div>
       </section>
     </main>
     <footer style="background-color: silver;" class="main-footer">
-      <p class="footer-contacts">
+      <div class="footer-contacts">
         БАРБЕРШОП «БОРОДИНСКИЙ»<br />
         АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br />
         <a href="map.html">КАК НАС НАЙТИ?</a><br />
         ТЕЛЕФОН: +7 (495) 666-02-66
-      </p>
+      </div>
       <div class="footer-social">
         <b>ДАВАЙТЕ ДРУЖИТЬ!</b>
-        <ul>
-          <li class="social-btn btn-vk">
-            <img src="img/vk@1x.png" alt="Вконтакте" />
-          </li>
-          <li class="social-btn btn-fb">
-            <img src="img/facebook@1x.png" alt="Фейсбук" />
-          </li>
-          <li class="social-btn btn-ig">
-            <img src="img/instagram@1x.png" alt="Инстаграмм" />
-          </li>
-        </ul>
+        <div class="social-btn">
+          <!-- <a href="#"><img src="img/vk@1x.png" alt="Вконтакте"/></a> -->
+          <!-- <a href="#"><img src="img/facebook@1x.png" alt="Фейсбук"/></a> -->
+          <!-- <a href="#"><img src="img/instagram@1x.png" alt="Инстаграмм"/></a> -->
+        </div>
       </div>
       <p class="footer-copyright">
         <b>Разработано:</b>
         <a class="button" href="https://htmlacademy.ru"> HTML Academy</a>
       </p>
-    </footer style="background-color: black;">
+    </footer>
   </body>
 </html>
