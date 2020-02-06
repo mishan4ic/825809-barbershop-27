@@ -7,7 +7,6 @@
   </head>
   <body>
     <header class="main-header">
-      <!-- <img src="img/bg_photo.png" alt="" /> -->
       <nav class="shop-nav">
         <ul class="site-navigation">
           <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
@@ -17,35 +16,43 @@
           <li><a href="contacts.html">КОНТАКТЫ</a></li>
         </ul>
         <ul class="user-navigation">
-          <!-- <li><img src="img/login.png" alt="иконка ВХОД" /></li> -->
-          <li class="login-link">ВХОД</li>
+          <li class="login-link"><a href="#">ВХОД</a></li>
         </ul>
+        <div class="popup_login">
+          <form class="visually-hidden" action="URL_1">
+            <legend>Личный кабинет</legend>
+            <p>Введите пожалуйста свой логин и пароль</p>
+            <input class="popup_user" type="name" placeholder="Логин" />
+            <input class="popup_user" type="password" placeholder="Пароль" />
+            <input id="popup_check" type="checkbox" />
+            <label for="popup_check">Запомните меня</label>
+            <a href="#">Я забыл пароль!</a>
+            <button>Войти</button>
+          </form>
+        </div>
       </nav>
       <div class="logo">
-        <img src="img/index-logo@1x.png" alt="логотип" />
+        <img src="img/index-logo@1x.png" alt="логотип Барбершопа" />
       </div>
     </header>
     <main>
-      <section>
-        <div>
+      <section class="advantages-block">
+        <div class="item-advantages">
           <h3>БЫСТРО</h3>
-          <!-- <img src="img/icon_advantages.png" alt="" /> -->
           <p>
             МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ —
             СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!
           </p>
         </div>
-        <div>
+        <div class="item-advantages">
           <h3>КРУТО</h3>
-          <!-- <img src="img/icon_advantages.png" alt="" /> -->
           <p>
             ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ. МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА
             ИЛИ КИНО! ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.
           </p>
         </div>
-        <div>
+        <div class="item-advantages">
           <h3>ДОРОГО</h3>
-          <!-- <img src="img/icon_advantages.png" alt="" /> -->
           <p>
             НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К
             ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕННЫЙ СТАТУС?
@@ -53,6 +60,7 @@
         </div>
       </section>
       <section>
+        <img src="img/bg_white.png" alt="белый фон блока" />
         <div class="news">
           <h3>НОВОСТИ</h3>
           <p>
@@ -63,14 +71,14 @@
             В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ
             МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ
           </p>
-          <a href="#">ВСЕ НОВОСТИ</a>
+          <button>ВСЕ НОВОСТИ</button>
         </div>
         <div class="photogallery">
           <h3>ФОТОГАЛЕРЕЯ</h3>
           <img src="img/Layer 21.png" alt="картинка галереи" />
           <div class="button-gallery">
-            <a href="#">НАЗАД</a>
-            <a href="#">ВПЕРЕД</a>
+            <button>НАЗАД</button>
+            <button>ВПЕРЕД</button>
           </div>
         </div>
       </section>
@@ -86,12 +94,16 @@
             ВРЕМЯ РАБОТЫ: ПН—ПТ: С 10:00 ДО 22:00 СБ—ВС: С 10:00 ДО 19:00
           </p>
           <div class="button-contacts">
-            <a href="#">КАК ПРОЕХАТЬ</a>
-            <a href="#">ОБРАТНАЯ СВЯЗЬ</a>
+            <button>КАК ПРОЕХАТЬ</button> <button>ОБРАТНАЯ СВЯЗЬ</button>
+            <img
+              class="visually-hidden"
+              src="img/map_contact.png"
+              alt="карта маршрута"
+            />
           </div>
         </div>
-        <div class="record-block">
-          <h3>ЗАПИСАТЬСЯ</h3>
+        <form class="record-block" action="URL">
+          <legend>ЗАПИСАТЬСЯ</legend>
           <p>
             УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ
             БРОНИ
@@ -99,23 +111,38 @@
           <div>
             <div>
               <label for="data-field">ДАТА</label>
-              <input id="data-field" type="number" placeholder="08.10.2017" />
+              <input
+                id="data-field"
+                type="date"
+                placeholder="08.10.2017"
+                aria-label="дата записи"
+              />
               <label for="time-field">ВРЕМЯ</label>
-              <input id="time-field" type="number" placeholder="10:00" />
+              <input
+                id="time-field"
+                type="time"
+                placeholder="10:00"
+                aria-label="время записи"
+              />
             </div>
             <div>
               <label for="name-field">ВАШЕ ИМЯ</label>
-              <input id="name-field" type="text" placeholder="Борода" />
-              <label for="call-field">ТЕЛЕФОН</label>
+              <input
+                id="name-field"
+                type="text"
+                placeholder="Борода"
+                aria-label="ваше имя"
+              />
+              <label for="call-field" aria-label="ваш телефон">ТЕЛЕФОН</label>
               <input
                 id="call-field"
-                type="number"
+                type="tel"
                 placeholder="+7 123 456-78-90"
               />
             </div>
-            <a href="#">ОТПРАВИТЬ</a>
+            <button>ОТПРАВИТЬ</button>
           </div>
-        </div>
+        </form>
       </section>
     </main>
     <footer style="background-color: silver;" class="main-footer">
@@ -128,14 +155,16 @@
       <div class="footer-social">
         <b>ДАВАЙТЕ ДРУЖИТЬ!</b>
         <div class="social-btn">
-          <!-- <a href="#"><img src="img/vk@1x.png" alt="Вконтакте"/></a> -->
-          <!-- <a href="#"><img src="img/facebook@1x.png" alt="Фейсбук"/></a> -->
-          <!-- <a href="#"><img src="img/instagram@1x.png" alt="Инстаграмм"/></a> -->
+          <button class="social-btn vk-btn"></button>
+          <button class="social-btn fb-btn"></button>
+          <button class="social-btn it-btn"></button>
         </div>
       </div>
       <p class="footer-copyright">
         <b>Разработано:</b>
-        <a class="button" href="https://htmlacademy.ru"> HTML Academy</a>
+        <button class="button">
+          HTML Academy
+        </button>
       </p>
     </footer>
   </body>
