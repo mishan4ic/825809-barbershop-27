@@ -25,6 +25,7 @@ body {
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
+  user-select: none;
 }
 ul {
   list-style: none;
@@ -67,6 +68,13 @@ a:active {
 }
 .btn:hover {
   background-color: #663d15;
+  cursor: pointer;
+}
+.btn:active {
+  outline: none;
+}
+.btn:focus {
+  outline: none;
 }
 .page-header__nav {
   background-color: #000;
@@ -376,20 +384,19 @@ a:active {
 .popup-login {
   background-color: #fff;
   width: 460px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   padding-top: 40px;
   padding-right: 80px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   padding-left: 80px;
   transform: translate(-50%, -50%);
+  display: none;
 }
 .popup-login__wrap {
-  background-color: #cfecf5;
   position: relative;
   color: #000;
-  border: 1px solid green;
 }
 .popup-login__wrap .title {
   margin: 0;
@@ -470,8 +477,16 @@ a:active {
   filter: brightness(0.1);
   display: none;
 }
-.remember-block {
-  display: flex;
+.link-forget {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+.popup-user__btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: none;
 }
 .popup-login .button-close {
   position: absolute;
@@ -483,4 +498,5 @@ a:active {
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
